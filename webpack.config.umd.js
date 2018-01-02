@@ -2,8 +2,8 @@ module.exports = function(umdConf) {
   umdConf.webpackFeatures.enableEntryHTML = true;
   umdConf.webpackFeatures.enableLESSModule = { modules: true, url: false };
 
-  umdConf.webpackFeatures.enableClean();
-  umdConf.webpackFeatures.enableHits();
+  // umdConf.webpackFeatures.enableClean();
+  // umdConf.webpackFeatures.enableHits();
 
   // umdConf.webpackFeatures.enableVendors();
   // umdConf.addVendor('react');
