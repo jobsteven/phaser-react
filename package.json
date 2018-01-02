@@ -1,0 +1,27 @@
+{
+  "name": "db4phaser",
+  "version": "1.0.0",
+  "description": "a dragonbones texture loading and parsing libaray for phaser game engine.",
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test/index.js"
+  },
+  "keywords": [
+    "db4phaser"
+  ],
+  "author": "AlexWang",
+  "license": "MIT",
+  "dependencies": {},
+  "wbp": {
+    "project": "umd",
+    "entries": {
+      "index": "./src/index.js"
+    },
+    "source": "src/",
+    "build": "dist/"
+  }
+}
