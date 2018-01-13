@@ -1,0 +1,2642 @@
+{
+  "frameRate": 30,
+  "version": "4.5",
+  "isGlobal": 0,
+  "armature": [{
+    "frameRate": 30,
+    "aabb": {
+      "x": -1182.543151582442,
+      "y": -781.9999999999998,
+      "width": 2234,
+      "height": 1559
+    },
+    "slot": [{
+        "color": {},
+        "name": "tree_R_D",
+        "parent": "tree_R_D"
+      },
+      {
+        "z": 1,
+        "color": {},
+        "name": "tree_L_D_",
+        "parent": "tree_L_D_"
+      },
+      {
+        "z": 2,
+        "color": {},
+        "name": "place",
+        "parent": "place"
+      },
+      {
+        "z": 3,
+        "color": {},
+        "name": "machine_R",
+        "parent": "machine_R"
+      },
+      {
+        "z": 4,
+        "color": {},
+        "name": "blades_R",
+        "parent": "blades_R"
+      },
+      {
+        "z": 5,
+        "color": {},
+        "name": "point_R",
+        "parent": "point_R"
+      },
+      {
+        "z": 6,
+        "color": {},
+        "name": "guan_R",
+        "parent": "guan_R"
+      },
+      {
+        "z": 7,
+        "color": {},
+        "name": "jiekou_R",
+        "parent": "jiekou_R"
+      },
+      {
+        "z": 8,
+        "color": {},
+        "name": "tuopan_R",
+        "parent": "tuopan_R"
+      },
+      {
+        "z": 9,
+        "color": {},
+        "name": "machine_L",
+        "parent": "machine_L"
+      },
+      {
+        "z": 10,
+        "color": {},
+        "name": "blades_L",
+        "parent": "blades_L"
+      },
+      {
+        "z": 11,
+        "color": {},
+        "name": "point_L",
+        "parent": "point_L"
+      },
+      {
+        "z": 12,
+        "color": {},
+        "name": "guan_L",
+        "parent": "guan_L"
+      },
+      {
+        "z": 13,
+        "color": {},
+        "name": "jiekou_L",
+        "parent": "jiekou_L"
+      },
+      {
+        "z": 14,
+        "color": {},
+        "name": "tuopan_L",
+        "parent": "tuopan_L"
+      },
+      {
+        "z": 15,
+        "color": {},
+        "name": "disc",
+        "parent": "disc"
+      },
+      {
+        "z": 16,
+        "color": {},
+        "name": "leaf_L_5",
+        "parent": "leaf_L_5"
+      },
+      {
+        "z": 17,
+        "color": {},
+        "name": "leaf_L_4",
+        "parent": "leaf_L_4"
+      },
+      {
+        "z": 18,
+        "color": {},
+        "name": "leaf_R_4",
+        "parent": "leaf_R_4"
+      },
+      {
+        "z": 19,
+        "color": {},
+        "name": "leaf_R_3",
+        "parent": "leaf_R_3"
+      },
+      {
+        "z": 20,
+        "color": {},
+        "name": "tree_L_T",
+        "parent": "tree_L_T"
+      },
+      {
+        "z": 21,
+        "color": {},
+        "name": "tree_R_T",
+        "parent": "tree_R_T"
+      },
+      {
+        "z": 22,
+        "color": {},
+        "name": "wood",
+        "parent": "wood"
+      },
+      {
+        "z": 23,
+        "color": {},
+        "name": "integral",
+        "parent": "integral"
+      },
+      {
+        "z": 24,
+        "color": {},
+        "name": "leaf_L_3",
+        "parent": "leaf_L_3"
+      },
+      {
+        "z": 25,
+        "color": {},
+        "name": "leaf_L_2",
+        "parent": "leaf_L_2"
+      },
+      {
+        "z": 26,
+        "color": {},
+        "name": "leaf_L_1",
+        "parent": "leaf_L_1"
+      },
+      {
+        "z": 27,
+        "color": {},
+        "name": "grape",
+        "parent": "grape"
+      },
+      {
+        "z": 28,
+        "color": {},
+        "name": "leaf_R_2",
+        "parent": "leaf_R_2"
+      },
+      {
+        "z": 29,
+        "color": {},
+        "name": "leaf_R_1",
+        "parent": "leaf_R_1"
+      },
+      {
+        "z": 30,
+        "color": {},
+        "name": "s",
+        "parent": "root",
+        "displayIndex": -1
+      }
+    ],
+    "defaultActions": [{
+      "gotoAndPlay": "entrance"
+    }],
+    "ik": [],
+    "animation": [{
+        "bone": [{
+            "name": "root",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "bone",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "wood",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -260.0405
+                },
+                "duration": 4
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -260.0405
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 28.5938
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 11
+              }
+            ]
+          },
+          {
+            "name": "tree_L_T",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -225.0197,
+                  "x": -131.8298
+                },
+                "duration": 2
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -225.0197,
+                  "x": -131.8298
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 9.7154,
+                  "x": 12.4912
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 13
+              }
+            ]
+          },
+          {
+            "name": "place",
+            "frame": [{
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 147.0525
+                },
+                "duration": 11
+              },
+              {
+                "transform": {},
+                "duration": 23
+              }
+            ]
+          },
+          {
+            "name": "tree_L_D_",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 167.2006,
+                  "x": -185.8209
+                },
+                "duration": 2
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 167.2006,
+                  "x": -185.8209
+                },
+                "duration": 10
+              },
+              {
+                "transform": {},
+                "duration": 22
+              }
+            ]
+          },
+          {
+            "name": "tree_R_T",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -211.1105,
+                  "x": 122.8232
+                },
+                "duration": 2
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -211.1105,
+                  "x": 122.8232
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 13.8792,
+                  "x": -8.3275
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 13
+              }
+            ]
+          },
+          {
+            "name": "disc",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 253.3224
+                },
+                "duration": 3
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 253.3224
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -35.7651
+                },
+                "duration": 8
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 21.0922
+                },
+                "duration": 8
+              },
+              {
+                "transform": {},
+                "duration": 5
+              }
+            ]
+          },
+          {
+            "name": "tree_R_D",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 196.2271,
+                  "x": 190.6477
+                },
+                "duration": 2
+              },
+              {
+                "curve": [
+                  0,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": 196.2271,
+                  "x": 190.6477
+                },
+                "duration": 10
+              },
+              {
+                "transform": {},
+                "duration": 22
+              }
+            ]
+          },
+          {
+            "name": "jiekou_R",
+            "frame": [{
+                "transform": {},
+                "duration": 7,
+                "tweenEasing": 0
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 10.5912,
+                  "skY": 10.5912
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -7.1634,
+                  "skY": -7.1634
+                },
+                "duration": 8
+              },
+              {
+                "transform": {
+                  "skX": 1.7139,
+                  "skY": 1.7139
+                },
+                "duration": 5,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 4
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_1",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 42.8321,
+                  "skY": 42.8321
+                },
+                "duration": 4
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 42.8321,
+                  "skY": 42.8321
+                },
+                "duration": 13
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -4.4646,
+                  "skY": -4.4646
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "integral",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "scX": 0.85
+                },
+                "duration": 14
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "scX": 1.1
+                },
+                "duration": 9
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "scX": 0.95
+                },
+                "duration": 6
+              },
+              {
+                "transform": {},
+                "duration": 5
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_3",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 30.22,
+                  "skY": 30.22
+                },
+                "duration": 4
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 30.22,
+                  "skY": 30.22
+                },
+                "duration": 13
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -8.0575,
+                  "skY": -8.0575
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_4",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 30.22,
+                  "skY": 30.22
+                },
+                "duration": 4
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 30.22,
+                  "skY": 30.22
+                },
+                "duration": 13
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -9.2148,
+                  "skY": -9.2148
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_2",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 44.501,
+                  "skY": 44.501
+                },
+                "duration": 4
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 44.501,
+                  "skY": 44.501
+                },
+                "duration": 13
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -6.7519,
+                  "skY": -6.7519
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "jiekou_L",
+            "frame": [{
+                "transform": {},
+                "duration": 7,
+                "tweenEasing": 0
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -9.3883,
+                  "skY": -9.3883
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 4.8608,
+                  "skY": 4.8608
+                },
+                "duration": 8
+              },
+              {
+                "transform": {
+                  "skX": -2.2638,
+                  "skY": -2.2638
+                },
+                "duration": 5,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 4
+              }
+            ]
+          },
+          {
+            "name": "grape",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 41.6104,
+                  "skY": 41.6104
+                },
+                "duration": 4
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 41.6104,
+                  "skY": 41.6104
+                },
+                "duration": 13
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -21.3619,
+                  "skY": -21.3619,
+                  "x": 25.9987
+                },
+                "duration": 9
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_3",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "leaf_L_4",
+            "frame": [{
+                "transform": {},
+                "duration": 4
+              },
+              {
+                "transform": {
+                  "skX": -25.9514,
+                  "skY": -25.9514
+                },
+                "duration": 13,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 21.5019,
+                  "skY": 21.5019
+                },
+                "duration": 9,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_2",
+            "frame": [{
+                "transform": {},
+                "duration": 4
+              },
+              {
+                "transform": {
+                  "skX": -18.094,
+                  "skY": -18.094
+                },
+                "duration": 13,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 10.15,
+                  "skY": 10.15
+                },
+                "duration": 9,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_5",
+            "frame": [{
+                "transform": {},
+                "duration": 4
+              },
+              {
+                "transform": {
+                  "skX": -21.6468,
+                  "skY": -21.6468
+                },
+                "duration": 13,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 22.7074,
+                  "skY": 22.7074
+                },
+                "duration": 9,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_1",
+            "frame": [{
+                "transform": {},
+                "duration": 4
+              },
+              {
+                "transform": {
+                  "skX": -20.4499,
+                  "skY": -20.4499
+                },
+                "duration": 13,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 5.1787,
+                  "skY": 5.1787
+                },
+                "duration": 9,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "guan_R",
+            "frame": [{
+                "transform": {},
+                "duration": 9,
+                "tweenEasing": 0
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 9.1807,
+                  "skY": 9.1807
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -4.9642,
+                  "skY": -4.9642
+                },
+                "duration": 8
+              },
+              {
+                "transform": {
+                  "skX": 2.1083,
+                  "skY": 2.1083
+                },
+                "duration": 5,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 2
+              }
+            ]
+          },
+          {
+            "name": "guan_L",
+            "frame": [{
+                "transform": {},
+                "duration": 9,
+                "tweenEasing": 0
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -7.2395,
+                  "skY": -7.2395
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 5.2612,
+                  "skY": 5.2612
+                },
+                "duration": 8
+              },
+              {
+                "transform": {
+                  "skX": -0.9891,
+                  "skY": -0.9891
+                },
+                "duration": 5,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 2
+              }
+            ]
+          },
+          {
+            "name": "machine_L",
+            "frame": [{
+                "transform": {},
+                "duration": 11,
+                "tweenEasing": 0
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -16.8636,
+                  "skY": -16.8636
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 12.0894,
+                  "skY": 12.0894
+                },
+                "duration": 8
+              },
+              {
+                "transform": {
+                  "skX": -2.3871,
+                  "skY": -2.3871
+                },
+                "duration": 5,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "machine_R",
+            "frame": [{
+                "transform": {},
+                "duration": 11,
+                "tweenEasing": 0
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 18.4514,
+                  "skY": 18.4514
+                },
+                "duration": 10
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -7.4081,
+                  "skY": -7.4081
+                },
+                "duration": 8
+              },
+              {
+                "transform": {
+                  "skX": 5.5217,
+                  "skY": 5.5217
+                },
+                "duration": 5,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "point_L",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "tuopan_R",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "tuopan_L",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "point_R",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "blades_R",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          },
+          {
+            "name": "blades_L",
+            "frame": [{
+              "transform": {},
+              "duration": 34
+            }]
+          }
+        ],
+        "ffd": [],
+        "duration": 34,
+        "frame": [],
+        "playTimes": 0,
+        "slot": [],
+        "name": "entrance"
+      },
+      {
+        "bone": [{
+            "name": "root",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "bone",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "tree_R_T",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "tree_L_D_",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "disc",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 25
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "y": -8.5018
+                },
+                "duration": 25
+              },
+              {
+                "transform": {},
+                "duration": 10
+              }
+            ]
+          },
+          {
+            "name": "place",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "wood",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "tree_R_D",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "tree_L_T",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "jiekou_L",
+            "frame": [{
+                "transform": {},
+                "duration": 1
+              },
+              {
+                "transform": {},
+                "duration": 25,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": -1,
+                  "skY": -1
+                },
+                "duration": 25,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 9
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_1",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 9.824,
+                  "skY": 9.824
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_3",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 2.9887,
+                  "skY": 2.9887
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_2",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 1.6279,
+                  "skY": 1.6279
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "integral",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "jiekou_R",
+            "frame": [{
+                "transform": {},
+                "duration": 1
+              },
+              {
+                "transform": {},
+                "duration": 25,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 1,
+                  "skY": 1
+                },
+                "duration": 25,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {},
+                "duration": 9
+              }
+            ]
+          },
+          {
+            "name": "leaf_R_4",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 6.4728,
+                  "skY": 6.4728
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_2",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -2.0579,
+                  "skY": -2.0579
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_5",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -3.5052,
+                  "skY": -3.5052
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "leaf_L_1",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -4.6081,
+                  "skY": -4.6081
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "grape",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "leaf_L_3",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "leaf_L_4",
+            "frame": [{
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 30
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -3.0539,
+                  "skY": -3.0539
+                },
+                "duration": 30
+              },
+              {
+                "transform": {},
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "guan_R",
+            "frame": [{
+                "transform": {},
+                "duration": 2
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 25
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 0.3962,
+                  "skY": 0.3962
+                },
+                "duration": 25
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "guan_L",
+            "frame": [{
+                "transform": {},
+                "duration": 2
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 25
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -1.1203,
+                  "skY": -1.1203
+                },
+                "duration": 25
+              },
+              {
+                "transform": {},
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "name": "machine_L",
+            "frame": [{
+                "transform": {},
+                "duration": 3
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 25
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": -0.8051,
+                  "skY": -0.8051
+                },
+                "duration": 26
+              },
+              {
+                "transform": {},
+                "duration": 6
+              }
+            ]
+          },
+          {
+            "name": "machine_R",
+            "frame": [{
+                "transform": {},
+                "duration": 3
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {},
+                "duration": 25
+              },
+              {
+                "curve": [
+                  0.5,
+                  0,
+                  0.5,
+                  1
+                ],
+                "transform": {
+                  "skX": 2.7125,
+                  "skY": 2.7125
+                },
+                "duration": 26
+              },
+              {
+                "transform": {},
+                "duration": 6
+              }
+            ]
+          },
+          {
+            "name": "tuopan_R",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "point_L",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "point_R",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "tuopan_L",
+            "frame": [{
+              "transform": {},
+              "duration": 60
+            }]
+          },
+          {
+            "name": "blades_L",
+            "frame": [{
+                "transform": {},
+                "duration": 29,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 180,
+                  "skY": 180
+                },
+                "duration": 1,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": -179,
+                  "skY": -179
+                },
+                "duration": 30,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": -6,
+                  "skY": -6
+                },
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "name": "blades_R",
+            "frame": [{
+                "transform": {},
+                "duration": 29,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": -177,
+                  "skY": -177
+                },
+                "duration": 1,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 179,
+                  "skY": 179
+                },
+                "duration": 30,
+                "tweenEasing": 0
+              },
+              {
+                "transform": {
+                  "skX": 6,
+                  "skY": 6
+                },
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "ffd": [],
+        "duration": 60,
+        "frame": [],
+        "playTimes": 0,
+        "slot": [],
+        "name": "stand"
+      }
+    ],
+    "type": "Armature",
+    "name": "TwoTeachers",
+    "skin": [{
+      "name": "",
+      "slot": [{
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 6.5973,
+              "skX": -142.275,
+              "skY": -142.275,
+              "x": 56.3323
+            },
+            "name": "leaf_R_4",
+            "path": "leaf_R_4"
+          }],
+          "name": "leaf_R_4"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 91.338,
+              "skX": 91.0746,
+              "skY": 91.0746,
+              "x": -1.8634
+            },
+            "name": "tuopan_L",
+            "path": "tuopan_L"
+          }],
+          "name": "tuopan_L"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 4.65,
+              "skX": 180,
+              "skY": 180,
+              "x": 31.0432
+            },
+            "name": "jiekou_L",
+            "path": "jiekou_L"
+          }],
+          "name": "jiekou_L"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -2.4771,
+              "skX": -116.5478,
+              "skY": -116.5478,
+              "x": 36.9375
+            },
+            "name": "grape",
+            "path": "grape"
+          }],
+          "name": "grape"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -1.632,
+              "skX": -178.9254,
+              "skY": -178.9254,
+              "x": 0.9739
+            },
+            "name": "blades_L",
+            "path": "blades_L"
+          }],
+          "name": "blades_L"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 444.8432,
+              "skX": -90,
+              "skY": -90,
+              "x": 73.55
+            },
+            "name": "integral",
+            "path": "integral"
+          }],
+          "name": "integral"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -23.426,
+              "skX": -0.5189,
+              "skY": -0.5189,
+              "x": 113.1994
+            },
+            "name": "guan_R",
+            "path": "guan_R"
+          }],
+          "name": "guan_R"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -8.262,
+              "skX": -135.9313,
+              "skY": -135.9313,
+              "x": 48.9759
+            },
+            "name": "leaf_R_3",
+            "path": "leaf_R_3"
+          }],
+          "name": "leaf_R_3"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 124.5311,
+              "skX": 90,
+              "skY": 90,
+              "x": 62.15
+            },
+            "name": "place",
+            "path": "place"
+          }],
+          "name": "place"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 68.6,
+              "x": 1.9568
+            },
+            "name": "disc",
+            "path": "disc"
+          }],
+          "name": "disc"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -272.8578,
+              "skX": 88.9944,
+              "skY": 88.9944,
+              "x": 143.7334
+            },
+            "name": "tree_R_D",
+            "path": "tree_R_D"
+          }],
+          "name": "tree_R_D"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 3.0366,
+              "skX": -130.8472,
+              "skY": -130.8472,
+              "x": 93.642
+            },
+            "name": "leaf_R_2",
+            "path": "leaf_R_2"
+          }],
+          "name": "leaf_R_2"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -0.6603,
+              "skX": -178.9254,
+              "skY": -178.9254,
+              "x": -0.5446
+            },
+            "name": "point_L",
+            "path": "point_L"
+          }],
+          "name": "point_L"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 18.6135,
+              "skX": -51.4326,
+              "skY": -51.4326,
+              "x": 106.6597
+            },
+            "name": "leaf_L_3",
+            "path": "leaf_L_3"
+          }],
+          "name": "leaf_L_3"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -5.4,
+              "x": 33.9068
+            },
+            "name": "jiekou_R",
+            "path": "jiekou_R"
+          }],
+          "name": "jiekou_R"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -466.3291,
+              "skX": -55.4926,
+              "skY": -55.4926,
+              "x": 722.6258
+            },
+            "name": "tree_L_T",
+            "path": "tree_L_T"
+          }],
+          "name": "tree_L_T"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -31.1938,
+              "skX": -0.8352,
+              "skY": -0.8352,
+              "x": 140.4171
+            },
+            "name": "machine_R",
+            "path": "machine_R"
+          }],
+          "name": "machine_R"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 0.3812,
+              "skX": -42.9746,
+              "skY": -42.9746,
+              "x": 36.9254
+            },
+            "name": "leaf_L_5",
+            "path": "leaf_L_5"
+          }],
+          "name": "leaf_L_5"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 30.5352,
+              "skX": -88.7616,
+              "skY": -88.7616,
+              "x": 59.454
+            },
+            "name": "leaf_R_1",
+            "path": "leaf_R_1"
+          }],
+          "name": "leaf_R_1"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 19.3956,
+              "skX": 179.8797,
+              "skY": 179.8797,
+              "x": 121.2341
+            },
+            "name": "guan_L",
+            "path": "guan_L"
+          }],
+          "name": "guan_L"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 1.9827,
+              "skX": -42.6389,
+              "skY": -42.6389,
+              "x": 60.2198
+            },
+            "name": "leaf_L_2",
+            "path": "leaf_L_2"
+          }],
+          "name": "leaf_L_2"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -83.8195,
+              "skX": 89.3036,
+              "skY": 89.3036,
+              "x": -6.5693
+            },
+            "name": "tuopan_R",
+            "path": "tuopan_R"
+          }],
+          "name": "tuopan_R"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 480.6445,
+              "skX": -134.7582,
+              "skY": -134.7582,
+              "x": 927.538
+            },
+            "name": "tree_R_T",
+            "path": "tree_R_T"
+          }],
+          "name": "tree_R_T"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 0.9969,
+              "skX": -0.8352,
+              "skY": -0.8352,
+              "x": 0.2214
+            },
+            "name": "blades_R",
+            "path": "blades_R"
+          }],
+          "name": "blades_R"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -8.0455,
+              "skX": -59.0306,
+              "skY": -59.0306,
+              "x": 36.8422
+            },
+            "name": "leaf_L_4",
+            "path": "leaf_L_4"
+          }],
+          "name": "leaf_L_4"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 542.2682,
+              "scX": 2.19,
+              "scY": 2.19,
+              "x": 962.855
+            },
+            "name": "s",
+            "path": "s"
+          }],
+          "name": "s"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 156.5018,
+              "skX": 89.8435,
+              "skY": 89.8435,
+              "x": 185.0783
+            },
+            "name": "tree_L_D_",
+            "path": "tree_L_D_"
+          }],
+          "name": "tree_L_D_"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": -3.4946,
+              "skX": -48.4497,
+              "skY": -48.4497,
+              "x": 89.6181
+            },
+            "name": "leaf_L_1",
+            "path": "leaf_L_1"
+          }],
+          "name": "leaf_L_1"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 24.4089,
+              "skX": -178.9254,
+              "skY": -178.9254,
+              "x": 144.2107
+            },
+            "name": "machine_L",
+            "path": "machine_L"
+          }],
+          "name": "machine_L"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 2.5432,
+              "skX": -90,
+              "skY": -90,
+              "x": 33.9
+            },
+            "name": "wood",
+            "path": "wood"
+          }],
+          "name": "wood"
+        },
+        {
+          "display": [{
+            "type": "image",
+            "transform": {
+              "y": 0.4911,
+              "skX": -0.8352,
+              "skY": -0.8352,
+              "x": 0.6141
+            },
+            "name": "point_R",
+            "path": "point_R"
+          }],
+          "name": "point_R"
+        }
+      ]
+    }],
+    "bone": [{
+        "transform": {
+          "y": -670.0136,
+          "x": -965.6972
+        },
+        "name": "root"
+      },
+      {
+        "transform": {
+          "y": 657.9118,
+          "x": 2131.6134
+        },
+        "name": "bone",
+        "parent": "root"
+      },
+      {
+        "length": 167,
+        "parent": "bone",
+        "transform": {
+          "y": -605.0982,
+          "skX": 134.7582,
+          "skY": 134.7582,
+          "x": -237.0662
+        },
+        "name": "tree_R_T"
+      },
+      {
+        "length": 311,
+        "parent": "bone",
+        "transform": {
+          "y": 412.2518,
+          "skX": -89.8435,
+          "skY": -89.8435,
+          "x": -2125.9662
+        },
+        "name": "tree_L_D_"
+      },
+      {
+        "transform": {
+          "y": 419.5018,
+          "x": -1168.9162
+        },
+        "name": "disc",
+        "parent": "bone"
+      },
+      {
+        "length": 125,
+        "parent": "bone",
+        "transform": {
+          "y": 429.7518,
+          "skX": -90,
+          "skY": -90,
+          "x": -1291.9904
+        },
+        "name": "place"
+      },
+      {
+        "length": 67,
+        "parent": "bone",
+        "transform": {
+          "y": -684.7982,
+          "skX": 90,
+          "skY": 90,
+          "x": -1165.9162
+        },
+        "name": "wood"
+      },
+      {
+        "length": 282,
+        "parent": "bone",
+        "transform": {
+          "y": 413.1018,
+          "skX": -88.9944,
+          "skY": -88.9944,
+          "x": -214.1662
+        },
+        "name": "tree_R_D"
+      },
+      {
+        "length": 137,
+        "parent": "bone",
+        "transform": {
+          "y": -616.1982,
+          "skX": 55.4926,
+          "skY": 55.4926,
+          "x": -2025.1162
+        },
+        "name": "tree_L_T"
+      },
+      {
+        "length": 186,
+        "parent": "tree_R_T",
+        "transform": {
+          "y": -3.608,
+          "skX": -3.911,
+          "skY": -3.911,
+          "x": -100.9605
+        },
+        "name": "leaf_R_2"
+      },
+      {
+        "length": 115,
+        "parent": "tree_R_T",
+        "transform": {
+          "y": 119.0587,
+          "skX": -45.9966,
+          "skY": -45.9966,
+          "x": -29.6708
+        },
+        "name": "leaf_R_1"
+      },
+      {
+        "length": 143,
+        "parent": "tree_R_T",
+        "transform": {
+          "y": 43.6609,
+          "skX": 1.1731,
+          "skY": 1.1731,
+          "x": 83.0076
+        },
+        "name": "leaf_R_3"
+      },
+      {
+        "length": 63,
+        "parent": "disc",
+        "transform": {
+          "y": -4.25,
+          "skX": 180,
+          "skY": 180,
+          "x": -284
+        },
+        "name": "jiekou_L"
+      },
+      {
+        "length": 85,
+        "parent": "wood",
+        "transform": {
+          "y": -450.8,
+          "x": 42.35
+        },
+        "name": "integral"
+      },
+      {
+        "length": 50,
+        "parent": "disc",
+        "transform": {
+          "y": -3,
+          "x": 285.05
+        },
+        "name": "jiekou_R"
+      },
+      {
+        "length": 144,
+        "parent": "tree_R_T",
+        "transform": {
+          "y": 127.3085,
+          "skX": 7.5168,
+          "skY": 7.5168,
+          "x": 115.6062
+        },
+        "name": "leaf_R_4"
+      },
+      {
+        "length": 142,
+        "parent": "tree_L_T",
+        "transform": {
+          "y": 100.7842,
+          "skX": -12.8536,
+          "skY": -12.8536,
+          "x": -71.046
+        },
+        "name": "leaf_L_2"
+      },
+      {
+        "length": 83,
+        "parent": "tree_L_T",
+        "transform": {
+          "y": -283.2193,
+          "skX": -12.5179,
+          "skY": -12.5179,
+          "x": 203.018
+        },
+        "name": "leaf_L_5"
+      },
+      {
+        "length": 185,
+        "parent": "tree_L_T",
+        "transform": {
+          "y": 0.1028,
+          "skX": -7.0428,
+          "skY": -7.0428,
+          "x": -125.002
+        },
+        "name": "leaf_L_1"
+      },
+      {
+        "length": 74,
+        "parent": "tree_R_T",
+        "transform": {
+          "y": 58.3164,
+          "skX": -18.2104,
+          "skY": -18.2104,
+          "x": 70.5713
+        },
+        "name": "grape"
+      },
+      {
+        "length": 178,
+        "parent": "tree_L_T",
+        "transform": {
+          "y": 82.7095,
+          "skX": -4.06,
+          "skY": -4.06,
+          "x": -141.441
+        },
+        "name": "leaf_L_3"
+      },
+      {
+        "length": 87,
+        "parent": "tree_L_T",
+        "transform": {
+          "y": -238.6381,
+          "skX": 3.5381,
+          "skY": 3.5381,
+          "x": 172.3696
+        },
+        "name": "leaf_L_4"
+      },
+      {
+        "length": 220,
+        "parent": "jiekou_R",
+        "transform": {
+          "y": 1,
+          "skX": 0.5189,
+          "skY": 0.5189,
+          "x": 78
+        },
+        "name": "guan_R"
+      },
+      {
+        "length": 238,
+        "parent": "jiekou_L",
+        "transform": {
+          "skX": 0.1203,
+          "skY": 0.1203,
+          "x": 72.35
+        },
+        "name": "guan_L"
+      },
+      {
+        "length": 77,
+        "parent": "guan_L",
+        "transform": {
+          "y": 2.4272,
+          "skX": -1.1949,
+          "skY": -1.1949,
+          "x": 249.0556
+        },
+        "name": "machine_L"
+      },
+      {
+        "length": 68,
+        "parent": "guan_R",
+        "transform": {
+          "y": -0.4663,
+          "skX": 0.3163,
+          "skY": 0.3163,
+          "x": 244.0558
+        },
+        "name": "machine_R"
+      },
+      {
+        "length": 29,
+        "parent": "machine_R",
+        "transform": {
+          "y": -190.7909,
+          "skX": -90.1387,
+          "skY": -90.1387,
+          "x": 142.4842
+        },
+        "name": "tuopan_R"
+      },
+      {
+        "transform": {
+          "y": 2.3265,
+          "x": 158.6843
+        },
+        "name": "point_L",
+        "parent": "machine_L"
+      },
+      {
+        "transform": {
+          "y": -8.3842,
+          "x": 153.6441
+        },
+        "name": "point_R",
+        "parent": "machine_R"
+      },
+      {
+        "length": 29,
+        "parent": "machine_L",
+        "transform": {
+          "y": 179.2541,
+          "skX": 90,
+          "skY": 90,
+          "x": 153.1651
+        },
+        "name": "tuopan_L"
+      },
+      {
+        "length": 68,
+        "parent": "point_L",
+        "transform": {},
+        "name": "blades_L"
+      },
+      {
+        "length": 61,
+        "parent": "point_R",
+        "transform": {
+          "y": -0.035,
+          "x": 2.3997
+        },
+        "name": "blades_R"
+      }
+    ]
+  }],
+  "name": "TwoTeacher_1"
+}

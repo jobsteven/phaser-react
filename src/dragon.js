@@ -7,30 +7,69 @@
 //  Author: alexwong
 //  Date: 2018-01-02 19:28:46
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-02 22:04:16 by {{last_modified_by}}
+//  Last Modified time: 2018-01-12 18:59:49 by {{last_modified_by}}
 //  Description: DragonSprite
 //
 // //////////////////////////////////////////////////////////////////////////////
+let dragWorldLoopTimer;
 
 module.exports = class Dragon extends Phaser.Sprite {
-  constructor(res_id, base_path = '') {
+
+  static startLoop(dragon, world, yes) {
+    if (yes && !dragWorldLoopTimer) {
+      dragWorldLoopTimer = dragonBones.PhaserFactory._game.time.events.loop(1, () => {
+        dragonBones.PhaserFactory.factory.dragonBones.advanceTime(1 / 60);
+      });
+    }
+
+    const timerEvents = dragonBones.PhaserFactory._game.time.events.events;
+
+    if (yes) {
+      if (!timerEvents.find(item => item === dragWorldLoopTimer)) {
+        timerEvents.push(dragWorldLoopTimer);
+      }
+      return
+    }
+
+    if (dragWorldLoopTimer && timerEvents.find(item => item === dragWorldLoopTimer)) {
+      timerEvents.splice(timerEvents.indexOf(dragWorldLoopTimer))
+    }
+  }
+
+  constructor(res_id, base_path = '../dragons/') {
     super(dragonBones.PhaserFactory._game, 0, 0);
 
-    this._proxy = null;
+    if (!res_id) {
+      throw new Error('dragon res_id is required!')
+    }
+
+    this._dragonFactory = dragonBones.PhaserFactory.factory;
 
     this.res_id = res_id;
-
     this.res_ske_id = `${res_id}_ske.json`;
-    this.res_ske_path = `${base_path}${this.res_ske_id}`;
 
-    this.res_tex_id = `${res_id}_tex.json`;
-    this.res_text_path = `${base_path}${this.res_tex_id}`;
+    this.events.onAddedToGroup.addOnce(Dragon.startLoop, Dragon, 0, true);
+    this.events.onRemovedFromGroup.addOnce(Dragon.startLoop, Dragon, 0, false);
 
-    this.res_raw_id = `${res_id}_tex.png`;
-    this.res_raw_path = `${base_path}${this.res_raw_id}`;
+    if (!this.game.cache.checkJSONKey(this.res_ske_id)) {
 
-    this.game.load.pack(res_id, null, {
-      [res_id]: [{
+      this.res_ske_path = `${base_path}${this.res_ske_id}`;
+
+      this.res_tex_id = `${res_id}_tex.json`;
+      this.res_text_path = `${base_path}${this.res_tex_id}`;
+
+      this.res_raw_id = `${res_id}_tex.png`;
+      this.res_raw_path = `${base_path}${this.res_raw_id}`;
+
+      return this._loadDragonBones();
+    }
+
+    this._prepareArmatureDisplay();
+  }
+
+  _loadDragonBones() {
+    this.game.load.pack(this.res_id, null, {
+      [this.res_id]: [{
         type: 'image',
         key: this.res_raw_id,
         url: this.res_raw_path,
@@ -47,33 +86,69 @@ module.exports = class Dragon extends Phaser.Sprite {
         overwrite: false
       }]
     })
-
-    this.game.load.onLoadComplete.add(this._loadPackComplete.bind(this));
+    this.game.load.onLoadComplete.addOnce(this._loadDragonBonesComplete, this);
   }
 
-  _loadPackComplete() {
-    const factory = dragonBones.PhaserFactory.factory;
-
-    factory.parseDragonBonesData(this.game.cache.getJSON(this.res_ske_id))
-    factory.parseTextureAtlasData(
-      this.game.cache.getJSON(this.res_tex_id),
-      this.game.cache.getImage(this.res_raw_id, true).base
-    );
-
-    this._proxy = factory.buildArmatureDisplay('TwoTeacher');
-    this.addChild(this._proxy);
-    // removed from displaylist todo
+  _loadDragonBonesComplete() {
+    this._parseBragonBones();
+    this._prepareArmatureDisplay();
   }
 
-  _destoryProxy() {
-    // todo
+  _prepareArmatureDisplay() {
+    const _armatureDisplay = this._dragonFactory.buildArmatureDisplay(this.res_id);
+    this.addChild(_armatureDisplay);
+    this.armatureDisplay = _armatureDisplay;
+  }
+
+  _parseBragonBones() {
+    try {
+      this._dragonFactory.parseDragonBonesData(this.game.cache.getJSON(this.res_ske_id))
+      this._dragonFactory.parseTextureAtlasData(
+        this.game.cache.getJSON(this.res_tex_id),
+        this.game.cache.getImage(this.res_raw_id, true).base
+      );
+    } catch (error) {
+      console.error('dragon data parse erorr', error)
+    }
+  }
+
+  set armatureDisplay(_armatureDisplay) {
+    this._armatureDisplay = _armatureDisplay
+  }
+
+  get armatureDisplay() {
+    if (!this._armatureDisplay) {
+      throw new Error('dragon armatureDisplay object has not been initialized.')
+    }
+    return this._armatureDisplay
   }
 
   play(...args) {
-    return this._proxy.animation.play(...args);
+    this.armatureDisplay.animation.play(...args);
+  }
+
+  gotoAndPlay(...args) {
+    this.armatureDisplay.animation.gotoAndPlay(...args);
+  }
+
+  gotoAndPlayByFrame(...args) {
+    this.armatureDisplay.animation.gotoAndPlayByFrame(...args);
+  }
+
+  once(...args) {
+    args._origin = args[1];
+    args[1] = (...evtargs) => {
+      this.removeEvent(...args);
+      args._origin.apply(args[2] || null, evtargs)
+    }
+    return this.armatureDisplay.addEvent(...args);
   }
 
   addEvent(...args) {
-    return this._proxy.addEvent(...args);
+    return this.armatureDisplay.addEvent(...args);
+  }
+
+  removeEvent(...args) {
+    return this.armatureDisplay.removeEvent(...args);
   }
 }
