@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:48:31
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 15:24:30 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 17:04:51 by {{last_modified_by}}
 //  Description: futuquant-index
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +46,9 @@ game.state.add('phaser_navigator', phaser_navigator, true)
 //   dragonBones.PhaserFactory.factory.dragonBones.advanceTime(-1);
 // }
 
-setInterval(() => {
-  const url = ['a/b/c', 'b/c'][Math.floor(Math.random() * 1000) % 2]
-  console.log('switch->', url);
-  phaser_navigator.goto(url)
-}, 4000)
+window.nav = phaser_navigator;
+
+// setInterval(() => {
+//   const url = ['a/b/c', 'a/b/d', 'b/c', 'd'][Math.floor(Math.random() * 1000) % 4]
+//   phaser_navigator.goto(url)
+// }, 4000)

@@ -7,23 +7,31 @@
 //  Author: alexwong
 //  Date: 2018-01-02 19:28:46
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-12 18:59:49 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 17:43:32 by {{last_modified_by}}
 //  Description: DragonSprite
 //
 // //////////////////////////////////////////////////////////////////////////////
 let dragWorldLoopTimer;
+let drivenDragons = 0;
 
 module.exports = class Dragon extends Phaser.Sprite {
 
   static startLoop(dragon, world, yes) {
+    yes ? drivenDragons++ : drivenDragons--;
+
     if (yes && !dragWorldLoopTimer) {
       dragWorldLoopTimer = dragonBones.PhaserFactory._game.time.events.loop(1, () => {
         dragonBones.PhaserFactory.factory.dragonBones.advanceTime(1 / 60);
       });
     }
 
+    // TIMERS
     const timerEvents = dragonBones.PhaserFactory._game.time.events.events;
 
+    // REFERS
+    // console.log('drivenDragons', drivenDragons)
+
+    // YES
     if (yes) {
       if (!timerEvents.find(item => item === dragWorldLoopTimer)) {
         timerEvents.push(dragWorldLoopTimer);
@@ -31,7 +39,9 @@ module.exports = class Dragon extends Phaser.Sprite {
       return
     }
 
-    if (dragWorldLoopTimer && timerEvents.find(item => item === dragWorldLoopTimer)) {
+    // NO
+    if (dragWorldLoopTimer && drivenDragons <= 0 &&
+      timerEvents.find(item => item === dragWorldLoopTimer)) {
       timerEvents.splice(timerEvents.indexOf(dragWorldLoopTimer))
     }
   }

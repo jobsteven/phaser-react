@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-12 16:14:17
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 15:35:54 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 17:49:44 by {{last_modified_by}}
 //  Description: db4phaser-router
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -23,77 +23,76 @@ class PhaserNavigator {
     PhaserComponent._game = this.game;
   }
 
-  update() {
+  update() {}
 
-  }
-
-  _com_regs = {}
   _com_idx = ''
+  _com_regs = {}
   _com_stack = []
 
   reg(com_id, Component) {
     this._com_regs[com_id] = Component
   }
 
-  async goto(target_com_idx) {
-    if (this._com_idx === target_com_idx) {
-      console.warn('goto is the same.')
+  async goto(new_com_idx = '') {
+    if (this._com_idx === new_com_idx) {
+      console.warn('the same path ignored.')
       return
     }
 
-    const target_ids = target_com_idx.split('/').filter(i => i)
-
-    if (!target_ids.length) {
+    const new_com_stack = new_com_idx.split('/').filter(i => i)
+    if (!new_com_stack.length) {
       console.warn('goto is empty and be ignored.')
       return
     }
 
-    if (!this._com_stack.length) {
-      await this._createComponents(...target_ids)
-      console.log('phaser_navigator - empty', this._com_idx, '->', target_com_idx);
-      this._com_idx = target_com_idx
+    if (!this._com_idx) {
+      await this._createComponents(...new_com_stack)
+      this._com_idx = new_com_idx
       return
     }
 
     let diff_index = -1
 
-    for (let i = 0; i < target_ids.length; i++) {
-      const target_id = target_ids[i]
-      const current_id = this._com_stack[i].com_id
+    for (let i = 0; i < new_com_stack.length; i++) {
+      const target_id = new_com_stack[i]
+      const current_id = this._com_stack[i] && this._com_stack[i].com_id
 
-      if (target_id !== current_id) {
+      if (current_id === undefined || target_id !== current_id) {
         diff_index = i
         break
       }
     }
 
-    if (diff_index === -1 && this._com_stack.length > this._com_idx.length) {
-      diff_index = this._com_idx.length
+    if (diff_index === -1) {
+      diff_index = new_com_stack.length
     }
 
-    await this._destoryComponents(...this._com_stack.splice(diff_index))
-    await this._createComponents(...target_ids.slice(diff_index))
+    const desComs = this._com_stack.splice(diff_index);
+    const creComs = new_com_stack.slice(diff_index)
 
-    console.log('phaser_navigator', this._com_idx, '->', target_com_idx);
-    this._com_idx = target_com_idx
+    await this._destoryComponents(...desComs)
+    await this._createComponents(...creComs)
+
+    console.log('phaser_navigator[', this._com_idx, ']->[', new_com_idx, ']');
+
+    this._com_idx = new_com_idx
   }
 
-  async _createComponents(...com_idx) {
-    if (!com_idx.length) return
+  async _createComponents(...create_com_idx) {
+    if (!create_com_idx.length) return
 
     try {
-      for (let i = 0; i < com_idx.length; i++) {
-        const com_id = com_idx[i]
+      for (let i = 0; i < create_com_idx.length; i++) {
+        const new_com_id = create_com_idx[i]
+        const PhaserComponentClass = this._com_regs[new_com_id];
 
-        const PhaserComponentClass = this._com_regs[com_id];
+        if (!PhaserComponentClass) throw new Error('this component has not been registered.')
 
         const phaser_component = new PhaserComponentClass();
 
         if (phaser_component.preload) {
           phaser_component.preload();
-
           this.game.load.start();
-
           await this._cacheComplete();
         }
 
@@ -101,7 +100,7 @@ class PhaserNavigator {
           phaser_component.create();
         }
 
-        this._com_stack.push({ com_id, com: phaser_component })
+        this._com_stack.push({ com_id: new_com_id, com: phaser_component })
       }
     } catch (e) {
       console.error('phaser_navigator create component errors', e)
@@ -124,11 +123,12 @@ class PhaserNavigator {
   }
 
   async _cacheComplete() {
-    return new Promise((res) => {
-      this.game.load.onLoadComplete.addOnce(res);
-    })
+    if (!this.game.load.hasLoaded) {
+      return new Promise((res) => {
+        this.game.load.onLoadComplete.addOnce(res);
+      })
+    }
   }
-
 }
 
 export default PhaserNavigator
