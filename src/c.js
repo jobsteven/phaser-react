@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 14:55:33 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 18:10:14 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -15,8 +15,13 @@
 import PhaserComponent from './phaser_component';
 
 module.exports = class C extends PhaserComponent {
+
+  init(data) {
+    console.log('C->init', data);
+  }
+
   create() {
-    this.text = this.game.add.text(350, 350, 'C', {
+    this.text = this.game.add.text(300, 350, 'C', {
       fontSize: 364,
       backgroundColor: 'white'
     })

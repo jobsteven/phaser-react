@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-12 16:14:17
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 17:49:44 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 18:00:34 by {{last_modified_by}}
 //  Description: db4phaser-router
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -23,7 +23,9 @@ class PhaserNavigator {
     PhaserComponent._game = this.game;
   }
 
-  update() {}
+  update() {
+    this._com_stack.forEach(({ com }) => com.update && com.update())
+  }
 
   _com_idx = ''
   _com_regs = {}
@@ -33,7 +35,7 @@ class PhaserNavigator {
     this._com_regs[com_id] = Component
   }
 
-  async goto(new_com_idx = '') {
+  async goto(new_com_idx = '', params) {
     if (this._com_idx === new_com_idx) {
       console.warn('the same path ignored.')
       return
@@ -46,7 +48,7 @@ class PhaserNavigator {
     }
 
     if (!this._com_idx) {
-      await this._createComponents(...new_com_stack)
+      await this._createComponents(new_com_stack, params)
       this._com_idx = new_com_idx
       return
     }
@@ -70,15 +72,15 @@ class PhaserNavigator {
     const desComs = this._com_stack.splice(diff_index);
     const creComs = new_com_stack.slice(diff_index)
 
-    await this._destoryComponents(...desComs)
-    await this._createComponents(...creComs)
+    await this._destoryComponents(desComs)
+    await this._createComponents(creComs, params)
 
     console.log('phaser_navigator[', this._com_idx, ']->[', new_com_idx, ']');
 
     this._com_idx = new_com_idx
   }
 
-  async _createComponents(...create_com_idx) {
+  async _createComponents(create_com_idx, params = {}) {
     if (!create_com_idx.length) return
 
     try {
@@ -89,6 +91,10 @@ class PhaserNavigator {
         if (!PhaserComponentClass) throw new Error('this component has not been registered.')
 
         const phaser_component = new PhaserComponentClass();
+
+        if (phaser_component.init) {
+          await phaser_component.init(params);
+        }
 
         if (phaser_component.preload) {
           phaser_component.preload();
@@ -107,7 +113,7 @@ class PhaserNavigator {
     }
   }
 
-  async _destoryComponents(...coms) {
+  async _destoryComponents(coms) {
     if (!coms.length) return
 
     try {
