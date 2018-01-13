@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 18:28:41 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 20:08:07 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -21,7 +21,7 @@ module.exports = class D extends PhaserComponent {
   }
 
   create() {
-    this.text = this.game.add.text(600, 600, 'D', {
+    this.text = this.add.text(600, 600, 'D', {
       fontSize: 364,
       backgroundColor: 'white'
     })
@@ -34,7 +34,7 @@ module.exports = class D extends PhaserComponent {
 
   shutdown() {
     console.log('D shutdown');
-    this.game.world.remove(this.text)
+    this.world.remove(this.text)
     // return new Promise((res) => {
     //   setTimeout(res, 4000)
     // })

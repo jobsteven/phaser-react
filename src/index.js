@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:48:31
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 18:38:18 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 20:08:52 by {{last_modified_by}}
 //  Description: futuquant-index
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@ phaser_navigator.reg('d', D)
 
 game.state.add('phaser_navigator', phaser_navigator, true)
 
-// window.nav = phaser_navigator;
+window.nav = phaser_navigator;
 
 // setInterval(() => {
 //   const url = ['a/b/c', 'a/b/d', 'b/c', 'd'][Math.floor(Math.random() * 1000) % 4]

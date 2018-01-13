@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 18:06:35 by {{last_modified_by}}
+//  Last Modified time: 2018-01-13 20:07:12 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ module.exports = class A extends PhaserComponent {
   }
 
   create() {
-    this.game.world.add(this.bg);
+    this.world.add(this.bg);
 
     this.bg.x = 960;
     this.bg.y = 670;
@@ -39,7 +39,7 @@ module.exports = class A extends PhaserComponent {
 
   shutdown() {
     console.log('A shutdown')
-    this.game.world.remove(this.bg)
+    this.world.remove(this.bg)
   }
 
   entranAniComplete() {
