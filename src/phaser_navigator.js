@@ -7,8 +7,8 @@
 //  Author: alexwong
 //  Date: 2018-01-12 16:14:17
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 18:00:34 by {{last_modified_by}}
-//  Description: db4phaser-router
+//  Last Modified time: 2018-01-13 18:39:16 by {{last_modified_by}}
+//  Description: PhaserNavigator
 //
 // //////////////////////////////////////////////////////////////////////////////
 
