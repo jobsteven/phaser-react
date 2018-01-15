@@ -7,14 +7,14 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 12:40:51 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 17:03:49 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
 
-import PhaserComponent from './phaser_component';
+import phaser_react from '../index.js';
 
-module.exports = class D extends PhaserComponent {
+module.exports = class D extends phaser_react.PhaserComponent {
 
   init(data) {
     console.log('D->init', data);

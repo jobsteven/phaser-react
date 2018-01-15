@@ -7,33 +7,40 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 12:19:31 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 17:03:20 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
 
-import PhaserComponent from './phaser_component';
+import phaser_react from '../index.js';
 
-module.exports = class C extends PhaserComponent {
+module.exports = class B extends phaser_react.PhaserComponent {
 
   init(data) {
-    console.log('C->init', data);
-
+    console.log('B->init', data);
+    return new Promise((ful, rej) => {
+      setTimeout(() => {
+        ful();
+      }, 3000)
+    })
   }
 
-  password = null
+  // logo
+  logo = null
 
-  create() {
-    this.password = this.add.text(300, 350, 'C', {
+  createLogo() {
+    this.logo = this.add.text(100, 100, 'B', {
       fontSize: 364,
       backgroundColor: 'white'
     })
-    console.log('C Create');
+    console.log('B Create');
 
   }
 
   shutdown() {
-    console.log('C shutdown');
-    this.world.remove(this.password)
+    console.log('B shutdown');
+    this.world.remove(this.logo)
+
+    this.logo = null
   }
 }

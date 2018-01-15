@@ -7,21 +7,22 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 12:40:54 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 17:05:08 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
 
-import Dragon from './dragon';
-import PhaserComponent from './phaser_component';
+import phaser_react from '../index.js';
 
-module.exports = class A extends PhaserComponent {
+console.log(phaser_react);
+
+module.exports = class A extends phaser_react.PhaserComponent {
   init(data) {
     console.log('A->init', data);
   }
 
   preload() {
-    this.bg = new Dragon('TwoTeachers')
+    this.bg = new phaser_react.Dragon('TwoTeachers')
 
     // this.load.image('dog', 'http://xxx.dog.png')
     // this.load.music('sexy', 'http://baljdsf.mp3')

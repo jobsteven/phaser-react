@@ -7,14 +7,14 @@
 //  Author: alexwong
 //  Date: 2018-01-02 19:28:46
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 17:43:32 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 16:33:23 by {{last_modified_by}}
 //  Description: DragonSprite
 //
 // //////////////////////////////////////////////////////////////////////////////
 let dragWorldLoopTimer;
 let drivenDragons = 0;
 
-module.exports = class Dragon extends Phaser.Sprite {
+export default class Dragon extends Phaser.Sprite {
 
   static startLoop(dragon, world, yes) {
     yes ? drivenDragons++ : drivenDragons--;

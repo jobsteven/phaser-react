@@ -1,5 +1,5 @@
 {
-  "name": "db4phaser",
+  "name": "phaser-react",
   "version": "1.0.0",
   "description": "a dragonbones texture loading and parsing libaray for phaser game engine.",
   "main": "dist/index.js",
@@ -19,6 +19,7 @@
   "wbp": {
     "project": "umd",
     "entries": {
+      "test": "./src/test/index.js",
       "index": "./src/index.js"
     },
     "source": "src/",

@@ -7,14 +7,14 @@
 //  Author: alexwong
 //  Date: 2018-01-12 16:14:17
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 11:39:25 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 16:56:43 by {{last_modified_by}}
 //  Description: PhaserNavigator
 //
 // //////////////////////////////////////////////////////////////////////////////
 
 import PhaserComponent from './phaser_component';
 
-class PhaserNavigator {
+export default class PhaserNavigator {
   constructor() {
     PhaserComponent._navigator = this;
   }
@@ -143,5 +143,3 @@ class PhaserNavigator {
     }
   }
 }
-
-export default PhaserNavigator

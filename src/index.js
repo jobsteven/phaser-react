@@ -5,36 +5,18 @@
 //
 //  Github Home: https://github.com/AlexWang1987
 //  Author: alexwong
-//  Date: 2018-01-02 20:48:31
+//  Date: 2018-01-15 16:32:55
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 12:21:03 by {{last_modified_by}}
-//  Description: futuquant-index
+//  Last Modified time: 2018-01-15 17:07:05 by {{last_modified_by}}
+//  Description: db4phaser-index
 //
 // //////////////////////////////////////////////////////////////////////////////
-
+import Dragon from './dragon';
+import PhaserComponent from './phaser_component';
 import PhaserNavigator from './phaser_navigator';
 
-import A from './a';
-import B from './b';
-import C from './c';
-import D from './d';
-
-const game = new Phaser.Game(1920, 1080, Phaser.CANVAS, 'stage', null)
-
-dragonBones.PhaserFactory.init(game);
-
-const phaser_navigator = new PhaserNavigator();
-
-phaser_navigator.reg('redenv', A)
-phaser_navigator.reg('b', B)
-phaser_navigator.reg('c', C)
-phaser_navigator.reg('d', D)
-
-game.state.add('phaser_navigator', phaser_navigator, true)
-
-window.nav = phaser_navigator;
-
-// setInterval(() => {
-//   const url = ['a/b/c', 'a/b/d', 'b/c', 'd'][Math.floor(Math.random() * 1000) % 4]
-//   phaser_navigator.goto(url)
-// }, 4000)
+export default {
+  Dragon,
+  PhaserComponent,
+  PhaserNavigator
+}
