@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 20:08:01 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 12:19:31 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -18,10 +18,13 @@ module.exports = class C extends PhaserComponent {
 
   init(data) {
     console.log('C->init', data);
+
   }
 
+  password = null
+
   create() {
-    this.text = this.add.text(300, 350, 'C', {
+    this.password = this.add.text(300, 350, 'C', {
       fontSize: 364,
       backgroundColor: 'white'
     })
@@ -31,6 +34,6 @@ module.exports = class C extends PhaserComponent {
 
   shutdown() {
     console.log('C shutdown');
-    this.world.remove(this.text)
+    this.world.remove(this.password)
   }
 }

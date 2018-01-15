@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-12 16:14:17
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 18:39:16 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 11:39:25 by {{last_modified_by}}
 //  Description: PhaserNavigator
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -35,6 +35,11 @@ class PhaserNavigator {
     this._com_regs[com_id] = Component
   }
 
+  level(key) {
+    const lowerLevels = this._com_stack.filter((com) => com.com_id === key)
+    return lowerLevels.length && lowerLevels[0]
+  }
+
   async goto(new_com_idx = '', params) {
     if (this._com_idx === new_com_idx) {
       console.warn('the same path ignored.')
@@ -43,7 +48,9 @@ class PhaserNavigator {
 
     const new_com_stack = new_com_idx.split('/').filter(i => i)
     if (!new_com_stack.length) {
-      console.warn('goto is empty and be ignored.')
+      // console.warn('goto is empty and be ignored.')
+      await this._destoryComponents(this._com_stack.splice(0))
+      this._com_idx = new_com_idx
       return
     }
 

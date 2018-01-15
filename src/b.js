@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 20:07:49 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 12:31:19 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -18,10 +18,18 @@ module.exports = class B extends PhaserComponent {
 
   init(data) {
     console.log('B->init', data);
+    return new Promise((ful, rej) => {
+      setTimeout(() => {
+        ful();
+      }, 3000)
+    })
   }
 
-  create() {
-    this.text = this.add.text(100, 100, 'B', {
+  // logo
+  logo = null
+
+  createLogo() {
+    this.logo = this.add.text(100, 100, 'B', {
       fontSize: 364,
       backgroundColor: 'white'
     })
@@ -31,6 +39,8 @@ module.exports = class B extends PhaserComponent {
 
   shutdown() {
     console.log('B shutdown');
-    this.world.remove(this.text)
+    this.world.remove(this.logo)
+
+    this.logo = null
   }
 }

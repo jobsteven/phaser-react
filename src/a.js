@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:54:54
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 20:07:12 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 12:40:54 by {{last_modified_by}}
 //  Description: futuquant-main
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -22,9 +22,22 @@ module.exports = class A extends PhaserComponent {
 
   preload() {
     this.bg = new Dragon('TwoTeachers')
+
+    // this.load.image('dog', 'http://xxx.dog.png')
+    // this.load.music('sexy', 'http://baljdsf.mp3')
+
   }
 
+  // background image
+  bg = null
+
+  // dog
+  // dog = null
+
   create() {
+
+    // this.dog = this.add.image(100, 100, 'dog')
+
     this.world.add(this.bg);
 
     this.bg.x = 960;
@@ -39,14 +52,22 @@ module.exports = class A extends PhaserComponent {
 
   shutdown() {
     console.log('A shutdown')
+
+    // this.bg.removeEvent(dragonBones.EventObject.COMPLETE, this.entranAniComplete.bind(this))
+
     this.world.remove(this.bg)
+    // this.world.remove(this.dog)
+
+    this.bg = null
+    // this.dog = null
   }
 
   entranAniComplete() {
     this.bg.play('stand');
 
     // setTimeout(() => {
-    //   this.goto('a/b/c', { a: 'av', b: 'bv' })
+    //   this.goto('a/b')
     // }, 2000)
   }
+
 }

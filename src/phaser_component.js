@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-12 18:08:20
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-13 20:06:38 by {{last_modified_by}}
+//  Last Modified time: 2018-01-15 11:37:33 by {{last_modified_by}}
 //  Description: PhaserComponent
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -85,4 +85,9 @@ export default class PhaserComponent {
     return PhaserComponent._navigator.goto(...args)
   }
 
+  level(key) {
+    return PhaserComponent._navigator.level(key)
+  }
+
+  // init , preload, create, update , shutdown
 }
