@@ -7,7 +7,7 @@
 //  Author: alexwong
 //  Date: 2018-01-02 20:48:31
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 17:01:59 by {{last_modified_by}}
+//  Last Modified time: 2018-01-16 11:38:05 by {{last_modified_by}}
 //  Description: futuquant-index
 //
 // //////////////////////////////////////////////////////////////////////////////
@@ -38,3 +38,7 @@ window.nav = phaser_navigator;
 //   const url = ['a/b/c', 'a/b/d', 'b/c', 'd'][Math.floor(Math.random() * 1000) % 4]
 //   phaser_navigator.goto(url)
 // }, 4000)
+
+setTimeout(() => {
+  phaser_navigator.goto('c')
+}, 1000)

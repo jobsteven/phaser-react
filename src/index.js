@@ -7,13 +7,15 @@
 //  Author: alexwong
 //  Date: 2018-01-15 16:32:55
 //  Email: 1669499355@qq.com
-//  Last Modified time: 2018-01-15 17:07:05 by {{last_modified_by}}
+//  Last Modified time: 2018-01-16 17:53:51 by {{last_modified_by}}
 //  Description: db4phaser-index
 //
 // //////////////////////////////////////////////////////////////////////////////
 import Dragon from './dragon';
 import PhaserComponent from './phaser_component';
 import PhaserNavigator from './phaser_navigator';
+
+export { Dragon, PhaserComponent, PhaserNavigator }
 
 export default {
   Dragon,
